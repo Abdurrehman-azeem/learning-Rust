@@ -93,7 +93,7 @@ Each value in Rust is of a certain data type.
 
 ## Data Types
 
-Rust as you know is a statically typed language, meaning each variable's type must be declared. The compiler must know the type of the variable.
+Rust as you know is a statically typed language, meaning each variable has a type. The compiler must know the type of the variable.
 Usually the compiler can infer the type of the variable that is declared by the value we assign it or how we use the variable.
 At times when the type is uncertain for example parsing string to either int or float, then we need to explicitly provide a type.
 

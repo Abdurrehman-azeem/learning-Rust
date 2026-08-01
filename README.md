@@ -1,7 +1,7 @@
 
 # Index
 ## These are the notes I've written while going through
-(Link To Official Tutorial)[https://doc.rust-lang.org/rust-by-example/]
+[Link To Official Tutorial](https://doc.rust-lang.org/rust-by-example/)
 
 Select a sub-project to view notes:
 

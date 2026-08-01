@@ -106,4 +106,4 @@ If you want to break out of the parent loop from within the nested loop you can 
   }
 ```
 
-The `break` statement breaks out of the child loop the `break \`parent_loop` statement preceding the label breaks out of the parent loop. Even through the execution is wihtin the child loop.
+The `break` statement breaks out of the child loop the `break 'parent_loop` statement preceding the label breaks out of the parent loop. Even through the execution is wihtin the child loop.

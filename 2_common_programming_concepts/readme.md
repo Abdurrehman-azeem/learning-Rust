@@ -316,7 +316,7 @@ The following example includes expressions and statements.
 ```
 
 The above example's `let x = {...}` is a statement, the block `{...}` is a expression that evaluates it to 4.
-Also, you may not that `y + 1` does not have a semi-colon. By not including a semi-colon we make the statement y + 1 into a statement, which means no value will be returned.
+Also, you may not that `y + 1` does not have a semi-colon. By not including a semi-colon and not assigning the value of y + 1. We make the statement y + 1 into a expression, which means no value will be returned.
 
 #  Functions With Return Values
 

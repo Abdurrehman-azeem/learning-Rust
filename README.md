@@ -1,6 +1,8 @@
 
 # Index
-## These are the notes I've written while going through (Link To Official Tutorial)[https://doc.rust-lang.org/rust-by-example/]
+## These are the notes I've written while going through
+(Link To Official Tutorial)[https://doc.rust-lang.org/rust-by-example/]
+
 Select a sub-project to view notes:
 
 * [📁 Cargo](./1_hello_cargo/readme.md) – Rust's Cargo Tool

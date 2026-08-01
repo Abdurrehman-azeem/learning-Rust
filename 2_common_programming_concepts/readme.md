@@ -346,9 +346,3 @@ The above code returns an error. The error would point to the fact that no value
 # Comments 
 
 They are simple in Rust. Make use of the //, the idiotmatic way to provide comments is by  providing a comment on a line preceding the statement it attempts to provide information for. For multi-line comments you will have to write comments on each line separately.
-
-## Control Flow
-
-# If Expressions
-
-Note that it is **If Expressions**, if statements evaluate to booleans.

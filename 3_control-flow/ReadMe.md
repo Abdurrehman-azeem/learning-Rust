@@ -102,8 +102,73 @@ If you want to break out of the parent loop from within the nested loop you can 
       if x < 4 {
         break 'parent_loop;
       }
+      if x % 3 {
+        x -= 2
+        continue 'parent_loop;
+      }
     }
   }
 ```
 
 The `break` statement breaks out of the child loop the `break 'parent_loop` statement preceding the label breaks out of the parent loop. Even through the execution is wihtin the child loop.
+
+You can make use of `continue` statements on the parent loop through disambigating the loop. `continue 'parent_loop` the statement would allow us to rerun the parent loop.
+
+# While Loop
+
+Quicker to implement than loop with if else conditions and breaks. the `loop` keyword provides greater control ofcourse but this is more convenient.
+
+```
+  fn main()  {
+    let mut count = 0;
+    while count < 11 {
+      count += 1;
+    }
+  }
+```
+
+# For Loop
+
+Let's say you've got an array and you wish to iterate through it. 
+
+```
+  fn main() {
+    let a = [1,2,3,4,5];
+    let mut idx = 0;
+    while idx < 5 {
+      println!("Element {} at index {}", a[idx], idx);
+      idx += 1;
+    }
+  }
+```
+
+Iterating through the array like so is *not efficient* and is *error prone*. Incase the array size changes (is reduced) you would have to update the loop if you do not then you could end up with an error.
+This code is also *slow*, as the compiled code would have additional runtime check added to the code which check whether the index is out of bounds . This check would run on each iteration slowing down the program.
+
+
+```
+fn main() {
+  let a = [1,2,3,4,5];
+
+  for num in a {
+    println!("{}", num);
+  }
+}
+```
+
+In this case you can use a for loop where the code is safer. Also, more efficient. The code generated via compilation can be more efficient as well as there is no need to compare the length of the array with the index on each iteration.
+
+It should not surprise you but you can make use of a `for` loop for things better suited to `while` loops as well. 
+
+For example, you can count down.
+
+```
+  fn main() {
+    for num in (0..5).rev() {
+      println!("{}...", num);
+    }
+  }
+```
+
+the .. operator is the range operator. 
+`rev` is used to reverse the array.

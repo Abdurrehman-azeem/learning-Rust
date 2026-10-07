@@ -146,7 +146,7 @@ Do remember though these overflows should be treated as errors. As this can lead
 
 # Floating-Point Types
 
-Floating point numbers can be of 2 types f32 and f64, they are both unsigned. The default 
+Floating point numbers can be of 2 types f32 and f64, they are both signed. The default 
   type is f64 as it provides better precision and is just as fast, when it comes to operations, as f32 on modern cpus.
 
 

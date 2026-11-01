@@ -46,12 +46,13 @@ Example of a constant
 
 Constants can be declared in any scope.
 Also, Constants differ from variables in one other way they may only be set to a constant expression like above.
-  Not the result of a some computation at runtime.
+  Not the result of some computation at runtime.
 Constants are named with all words in capital and underscores between each word.
 
 ## Shadowing
 
 In Rust you can declare a variable with the same name as a variable already declared.
+Shadowing is compile time feature not a Runtime feature. As the code runs shadowing is no longer in play. Using shadowing or `let mut` are exactly the same in the compiled code. 
 
 For example;
 
@@ -90,8 +91,6 @@ It is different from `mut` in the sense that you can use different variable type
 ## Data Types
 
 Each value in Rust is of a certain data type.
-
-## Data Types
 
 Rust as you know is a statically typed language, meaning each variable has a type. The compiler must know the type of the variable.
 Usually the compiler can infer the type of the variable that is declared by the value we assign it or how we use the variable.
@@ -138,7 +137,7 @@ Lets say you have a u8 and you assign to it 256, one of two behaviors can occur.
 When compiling in debug mode, the compiler will panic on the overflow.
 
 When compiling the code for release with the --release flag. There are no checks for overflows.
-  Rust on encountering overflows for the release build performs a `complement wrapping`.
+  Rust on encountering overflows for the release build performs `complement wrapping`.
   Where 256 wraps to become 0. 257 becomes 1 so on and so forth
     Basically take modulo of the overflow by 255 for e.g (257 % 255) + 1 =  2
 

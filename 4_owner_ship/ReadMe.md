@@ -90,7 +90,7 @@ If we look at a similar example concerning Strings. The behavior would be differ
   let s2 = s1;
 ```
 
-![Rust String Type Data Structure](/ownership/images/string_data_structure.png)
+![Rust String Type Data Structure](ownership/images/string_data_structure.png)
 
 In the image you can see the String is made up of 3 parts a pointer, length and capacity. The pointer is to the memory that holds the contents of the string which exist on the heap. The pointer, length and capcity are all stored on the stack.
 

@@ -90,7 +90,7 @@ If we look at a similar example concerning Strings. The behavior would be differ
   let s2 = s1;
 ```
 
-![Rust String Type Data Structure](ownership/images/string_data_structure.png)
+![Rust String Data structure](https://doc.rust-lang.org/book/img/trpl04-01.svg)
 
 In the image you can see the String is made up of 3 parts a pointer, length and capacity. The pointer is to the memory that holds the contents of the string which exist on the heap. The pointer, length and capcity are all stored on the stack.
 
@@ -98,7 +98,7 @@ The length is how many bytes the contents of String are holding and the capicity
 
 When we assign s1 to s2, we copy the pointer, capcity and length from the s2 for s1 on the stack. We do not copy the data on the heap. So the pointer to both s1 and s2 point to the same area of the heap which contains the memory.
 
-![Data structures for s1 and s2](./ownership/images/string data structure 2.svg)
+![Data structures for s1 and s2](https://doc.rust-lang.org/book/img/trpl04-02.svg)
 
 The issue that we can face now is that since both s1 and s2 point to the same memory in the heap. If one of the variables goes out of scope. Rust automatically calls `drop` function and cleans the heap memory. While one of the variables still points to the area in memory which was cleaned. This is known as a *double free* error and is a memory safety bug.
 

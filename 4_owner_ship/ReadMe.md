@@ -34,8 +34,9 @@ Knowing ownership you won't have to think about stack or heap often. The main pu
 
 ```
   {
-    let s = "hello";
+    let s = String::from("hello");
   } // s is the owner of "hello" and s goes out of scope here.
+  // The allocated data for s is recovered at the end of the scope with `drop` function.
 ```
 
 ## The String Type
@@ -43,7 +44,8 @@ Knowing ownership you won't have to think about stack or heap often. The main pu
 String type is stored on the heap and provides a good example of how Rust knows when to clean up the data from the heap.
 In this section an emphasis on parts of String relating to ownership will be covered. These aspects apply to other complex types.
 
-String literals like the one below are imutable thus not suitable for every usecase. 
+String literals like the one below are imutable thus not suitable for every usecase.
+They are also not stored on the heap they are embedded directly into the code.
 ```
   let s = "hello";
 ```
@@ -88,7 +90,7 @@ If we look at a similar example concerning Strings. The behavior would be differ
   let s2 = s1;
 ```
 
-![Rust String Type Data Structure](./ownership/images/string data structure.svg)
+![Rust String Type Data Structure](/ownership/images/string_data_structure.png)
 
 In the image you can see the String is made up of 3 parts a pointer, length and capacity. The pointer is to the memory that holds the contents of the string which exist on the heap. The pointer, length and capcity are all stored on the stack.
 
